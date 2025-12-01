@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
-// --- IMPORTAÇÕES NOVAS (MODULAR) ---
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 
@@ -30,7 +29,6 @@ const firebaseConfig = {
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    // --- INICIALIZAÇÃO NOVA ---
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
     provideDatabase(() => getDatabase())
   ],

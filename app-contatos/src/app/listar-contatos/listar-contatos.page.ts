@@ -10,12 +10,10 @@ import { Observable } from 'rxjs';
 })
 export class ListarContatosPage {
 
-  // A variável agora é um Observable (por convenção usamos o $ no final)
   contatos$!: Observable<any[]>;
 
   constructor(private bancoService: BancoService) { }
 
-  // ionViewWillEnter roda toda vez que a tela abre (mesmo voltando)
   ionViewWillEnter() {
     this.contatos$ = this.bancoService.listarContatos();
   }

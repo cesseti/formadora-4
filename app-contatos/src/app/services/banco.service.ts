@@ -20,7 +20,6 @@ export class BancoService {
 
   listarContatos() {
     const contatosRef = ref(this.db, 'contatos');
-    // listVal retorna os valores como Observable (igual ao valueChanges antigo)
     return listVal(contatosRef);
   }
 }
